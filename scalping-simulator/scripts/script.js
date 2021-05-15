@@ -1,4 +1,4 @@
-import { save, load } from "./utils/saveload";
+
 
 
 
@@ -40,4 +40,29 @@ function update(id, value){
 }
 function updateView(){
     update('money', player.money.toLocaleString('en-US'));
+}
+
+function load(key){
+    if (!window.localStorage.getItem(key)) return false;
+    return JSON.parse(window.localStorage.getItem(key))
+}
+
+function save(key, obj){
+    const _obj = JSON.stringify(obj);
+    window.localStorage.clear();
+    window.localStorage.setItem(key, _obj);
+    return;
+}
+
+
+
+
+
+// related
+const employees = {
+    "cashiers": {
+        amount: 0,
+        base: 10,
+        multiplier: 1.1
+    }
 }
