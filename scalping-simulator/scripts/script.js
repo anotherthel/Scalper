@@ -4,7 +4,7 @@
 
 let player = {
     money: 0,
-    totalincome: 1,
+    totalincome: 0,
     clicks: {
         clickspclick: 1,
         total: 0
@@ -25,6 +25,7 @@ setInterval(() => {
 
 function clickMoney(){
     player.money += player.clicks.clickspclick;
+    updateView();
 }
 
 function s(){
