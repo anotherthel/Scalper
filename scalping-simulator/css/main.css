@@ -15,13 +15,16 @@
 .balance{
     cursor: default;
     width: fit-content;
-    margin-left: 75%;
     text-align: left;
 }
 
 h3 {
-    font-family:'Times New Roman', Times, serif;
+    font-family: 'Georgia', Verdana, sans-serif;
     text-align: center;
     color: black;
-    margin-left: 50%;
+}
+
+.sp1 {
+    font-family: 'Courier New', Courier, monospace;
+    
 }

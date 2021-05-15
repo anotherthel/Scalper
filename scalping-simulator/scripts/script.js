@@ -25,6 +25,7 @@ setInterval(() => {
 
 function clickMoney(){
     player.money += player.clicks.clickspclick;
+    player.clicks.total ++;
     updateView();
 }
 
