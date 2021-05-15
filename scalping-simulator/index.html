@@ -16,11 +16,11 @@
         <script type="text/javascript" src="notify.js"></script>
     </head>
     <body>
-        <div>
-            <h1 class="balance" id="playerbalance" onclick="clickMoney()">
-                $0
-            </h1>
-        </div>>
+        <div class="main" id="main">
+            <div class="balance" onmousedown="clickMoney()" onselect="return false">
+                <h1 class="bal">$<span id="money">0</span></h1>
+            </div>
+        </div>
         <script src="./scripts/script.js"></script>
     </body>
 </html>

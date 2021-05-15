@@ -1,7 +1,18 @@
-.balance {
+.bal {
     font-family: Arial;
     text-align: center;
     color: black;
     margin-top: 0%;
     margin-bottom: 0%;
+}
+
+.main {
+    text-align: center;
+}
+
+.balance{
+    cursor: default;
+    width: fit-content;
+    margin-right: 75%;
+    text-align: left;
 }
