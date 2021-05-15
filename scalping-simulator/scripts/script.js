@@ -1,10 +1,7 @@
 import { update } from "./utils/utils"
 import { save, load } from "./utils/saveload";
 
-setInterval(() => {
-    updateView();
-    player.money += player.totalincome;
-}, player.tick);
+
 
 let player = {
     money: 0,
@@ -22,6 +19,10 @@ let player = {
     }
 }
 
+setInterval(() => {
+    document.getElementById('playerbalance').innerHTML = player.money.toLocaleString('en-us');
+    player.money += player.totalincome;
+}, player.tick);
 
 function clickMoney(){
     player.money += player.clicks.clickspclick;
