@@ -39,5 +39,5 @@ function update(id, value){
     return document.getElementById(id).innerHTML = value;
 }
 function updateView(){
-    update('playerbalance', player.money.toLocaleString('en-US'));
+    update('money', player.money.toLocaleString('en-US'));
 }
