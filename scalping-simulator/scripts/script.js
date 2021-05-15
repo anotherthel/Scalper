@@ -1,5 +1,5 @@
-import { update } from "./utils"
-import { save, load } from "./saveload";
+import { update } from "./utils/utils"
+import { save, load } from "./utils/saveload";
 
 let player = {
     money: 0,
@@ -11,6 +11,21 @@ let player = {
     tick: 1000,
     config: {
 
+    },
+    employees: {
+        
     }
 }
 
+
+function clickMoney(){
+    player.money += player.clicks.clickspclick;
+}
+
+function s(){
+    save('_player', player);
+}
+function l(){
+    if (load('_player')) return player = load('_player');
+    else return;
+}
