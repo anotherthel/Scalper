@@ -36,11 +36,26 @@ function l(){
     else return;
 }
 
+
+
+
+
+
+
+
+
+
+//etc not game 
+function nFmt(n, t='en-US'){
+    return n.toLocaleString(t);
+}
 function update(id, value){
     return document.getElementById(id).innerHTML = value;
 }
 function updateView(){
-    update('money', player.money.toLocaleString('en-US'));
+    update('money', nFmt(player.money));
+    update('incomepsec', nFmt(player.totalincome));
+    update('tickcalced', nFmt(player.tick));
 }
 
 function load(key){

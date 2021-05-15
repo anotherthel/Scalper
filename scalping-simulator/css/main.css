@@ -4,15 +4,24 @@
     color: black;
     margin-top: 0%;
     margin-bottom: 0%;
+    margin-left: 50%;
 }
 
 .main {
     text-align: center;
+    align-self: center;
 }
 
 .balance{
     cursor: default;
     width: fit-content;
-    margin-right: 75%;
+    margin-left: 75%;
     text-align: left;
+}
+
+h3 {
+    font-family:'Times New Roman', Times, serif;
+    text-align: center;
+    color: black;
+    margin-left: 50%;
 }
