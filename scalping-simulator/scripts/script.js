@@ -1,4 +1,3 @@
-import { update } from "./utils/utils"
 import { save, load } from "./utils/saveload";
 
 
@@ -20,8 +19,8 @@ let player = {
 }
 
 setInterval(() => {
-    document.getElementById('playerbalance').innerHTML = player.money.toLocaleString('en-us');
     player.money += player.totalincome;
+    updateView();
 }, player.tick);
 
 function clickMoney(){
@@ -36,6 +35,9 @@ function l(){
     else return;
 }
 
+function update(id, value){
+    return document.getElementById(id).innerHTML = value;
+}
 function updateView(){
-    update('playerbalance', player.money.toLocaleString('en-us'));
+    update('playerbalance', player.money.toLocaleString('en-US'));
 }
