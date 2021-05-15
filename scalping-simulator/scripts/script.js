@@ -1,9 +1,14 @@
 import { update } from "./utils/utils"
 import { save, load } from "./utils/saveload";
 
+setInterval(() => {
+    updateView();
+    player.money += player.totalincome;
+}, player.tick);
+
 let player = {
     money: 0,
-    totalincome: 0,
+    totalincome: 1,
     clicks: {
         clickspclick: 1,
         total: 0
@@ -28,4 +33,8 @@ function s(){
 function l(){
     if (load('_player')) return player = load('_player');
     else return;
+}
+
+function updateView(){
+    update('playerbalance', player.money.toLocaleString('en-us'));
 }
